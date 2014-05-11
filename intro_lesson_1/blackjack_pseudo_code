@@ -1,0 +1,74 @@
+variables:
+player_name is "Dealer" or the Player
+deck
+player_cards
+dealer_cards
+player_bust
+dealer_bust
+
+player_total_score
+
+
+classes:
+Cards
+Deck
+
+Data structure for card:
+
+cards = [{ :suit => '', :card_number => [] }]
+
+suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades']
+
+card_numbers = [1..13]
+
+begin
+  get player name and store in player_name
+
+  while player wants to continue
+    Deal card 1 to player
+    Deal card 2 to player
+
+    Calculate and display player_total_score
+
+    while player wants to deal next card ?
+      Deal card to player
+      Calculate and display player_total_score
+      if player_total_score == 21
+        Display well done player_name ! You won
+        Break out of while
+      else if player_total_score > 21
+        Diaplay Ha! you lost player_name !
+        Break out of while
+      endif
+    end while
+
+    if player_total_score < 21
+      Deal card 1 to dealer
+      Deal card 2 to dealer
+
+      Calculate and display dealer_total_score
+
+      while dealer_total_score <= 17 OR dealer wants to deal next card ?
+	      Deal card to dealer
+	      Calculate and display dealer_total_score
+	      if dealer_total_score == 21
+	        Display well done player_name ! You won
+	        Break out of while
+	      else if dealer_total_score > 21
+	        Diaplay Ha! you lost player_name !
+	        Break out of while
+	      else if dealer_total_score == player_total_score
+	        Display You drew
+	      else if dealer_total_score > player_total_score
+	        Display Dealer won player_name !
+	      else if dealer_total_score < player_total_score
+	        Display Dealer lost to player_name !
+	      endif
+	    end while
+    endif
+    
+  end while
+end
+
+
+
