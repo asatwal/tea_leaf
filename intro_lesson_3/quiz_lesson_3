@@ -1,0 +1,92 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. What is HTML? What is CSS? What is Javascript?
+
+1. HTML is a markup language that browsers understand
+   It's used to display the data and screen to the end user in the browser
+
+   CSS is used to format and display the style of the browser screen
+
+   Javascript is a client side scripting language used by the browser for
+   enhanced display and input functionality
+
+
+2. What are the major parts of an HTTP request?
+
+2. HTTP Request
+   The major parts of a HTTP request are the verbs, URL and parameters
+
+
+3. What are the major parts of an HTTP response?
+
+3. HTTP Response
+   The major parts of a HTTP response are the status code and payload
+
+
+4. How do you submit an HTTP POST request, with a "username" attribute set to "bob"? What if we wanted a GET request instead?
+
+4. A HTTP Post request is submitted via a form in HTML. The method in the 
+   form is set to POST. The input name attribute is set to the variable name. The 
+   variable name will be set to the input value of the form.
+
+   To use a Get request, the method should be set to GET in the form.
+
+5. Why is it important for us, as web developers, to understand that HTTP is a "stateless" protocol?
+
+5. It is important to understand that HTTP is a stateless protocol so that we know
+   we should reconstruct the state of the application when handling each http verb.
+   We cannot make assumptions about objects and variables being saved across http
+   interactions with the user.
+
+6. If the internet is just HTTP requests/responses, why do we only use browsers to interface with web applications? Are there any other options?
+
+6. A browser will handle all errors redirections etc. There are some other options
+   eg basic http clients that will not handle redirections etc.
+
+7. What is MVC, and why is it important?
+
+7. MVC is the model view controller. It is the design model used by Web Apps when
+   handling and processing http requests.
+
+
+Sinatra
+
+1. At a high level, how are requests processed?
+
+1. In Sinatra requests are processed using a controller. The controller handles specific routes and
+   http request verbs. Processing usually involves handling some data and rendering some output.
+
+2. In the controller/action, what's the difference between rendering and redirecting?
+
+2. Rendering is used to display some output and return control back to the client
+   Redirecting gives control to another route in the controller 
+
+3. In the ERB view template, how do you show dynamic content?
+
+3. Dynamic content is shown with embedded ruby using a special direction %= in the html. Dynamic
+   content will display some kind of variable.
+
+4. Given what you know about ERB templates, when do you suppose the ERB template is turned into HTML?
+
+   ERB template is turned into HTML at runtime when it is invoked
+
+5. What's the role of instance variables in Sinatra?
+
+	 Instance variables are used to pass data between the MVC components in Sinatra
+
+
+
+
+
